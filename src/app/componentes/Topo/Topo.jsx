@@ -13,7 +13,7 @@ setTemaDark(!temaDark)
     <div className={temaDark?estilos.temaEscuro:estilos.temaClaro}>
        <section className={estilos.containerTopo} >
       <Image src={Logo1} alt={"Logotipo barberia"}></Image>
-      <button onClick={trocaTema}><FiSun/></button>
+      <button  onClick={trocaTema} > {temaDark?<FiSun className={estilos.botao}/>:<FiMoon className={estilos.botao}/>} </button>
     </section>
     </div>
   );
