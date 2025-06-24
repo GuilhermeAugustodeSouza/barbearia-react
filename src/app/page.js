@@ -7,16 +7,16 @@ import Sobre from './componentes/Sobre/Sobre.jsx'
 import estilos from "./page.module.css";
 
 export default function Home() {
-  const [temaEscuro,setTemaEscuro]= useState(false);
-  function alterarTema(){
-    setTemaEscuro(!temaEscuro);
+  const[temaDark,setTemaDark]= useState(false);
+  function trocaTema(){
+setTemaDark(!temaDark)
   }
   return (
-    <main className={temaEscuro?estilos.temaDark:estilos.temaLight}>
+    <main>
 
       <Topo/>
       <Banner/>
-      <Sobre/>
+      <Sobre className={temaDark?estilos.temaEscuro:estilos.temaClaro}/>
        
     </main>
   );
