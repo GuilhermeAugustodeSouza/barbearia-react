@@ -1,7 +1,7 @@
 import estilos from "./Sobre.module.css";
-export default function Sobre() {
+export default function Sobre({temaDark}) {
   return (
-    <section  className={estilos.containerSobre}>
+    <footer className={`${estilos.containerSobre} ${temaDark?estilos.temaEscuro:estilos.TemaClaro}`}>
       <div>
       <h1>Bem vindo a BARBER SHOP</h1>
       <p className={estilos.paragrafoBold}>  
@@ -16,6 +16,6 @@ export default function Sobre() {
       </p>
       <p className={estilos.assinatura}>S. Kelly</p>
       </div>
-    </section>
+    </footer>
   );
 }

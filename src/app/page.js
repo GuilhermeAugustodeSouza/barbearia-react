@@ -9,14 +9,14 @@ import estilos from "./page.module.css";
 export default function Home() {
   const[temaDark,setTemaDark]= useState(false);
   function trocaTema(){
-setTemaDark(!temaDark)
+setTemaDark(!temaDark);
   }
   return (
-    <main>
+    <main className={temaDark?estilos.temaEscuro:estilos.temaClaro}>
 
-      <Topo/>
+      <Topo temaDark={temaDark} trocaTema={trocaTema} />
       <Banner/>
-      <Sobre className={temaDark?estilos.temaEscuro:estilos.temaClaro}/>
+      <Sobre temaDark={temaDark}/>
        
     </main>
   );
